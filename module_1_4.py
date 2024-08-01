@@ -1,0 +1,7 @@
+my_string = input('Ваше любимое животное: ')
+print(len(my_string))
+print('Крокодил'.upper())
+print('Крокодил'.lower())
+print('К р о к о д и л'.replace(' ',''))
+print('Крокодил'[0])
+print('Крокодил'[-1])
