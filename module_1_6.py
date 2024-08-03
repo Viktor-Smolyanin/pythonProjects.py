@@ -5,8 +5,9 @@ my_dict['Masha'] = 2000
 print(my_dict['Masha'])
 my_dict['Masha'] = 2002
 my_dict.update({'Artem': 1915, 'Kamila': 1981})
-del my_dict['Egor']
-print(my_dict.get('Egor'))
+a = my_dict.pop('Egor')
+print(my_dict)
+print(a)
 my_set = {1, 'Яблоко', 42.314,1, 'Яблоко', 42.314}
 print(my_set)
 my_set.update([13,(5,6,1.6)])
