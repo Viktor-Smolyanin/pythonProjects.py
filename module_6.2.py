@@ -3,11 +3,11 @@ class Vehicle:
     def __new__(cls, *args, **kwargs):
         cls.COLOR_VARIANTS.append(args[0])
         return object.__new__(cls)
-    def __init__(self, owner, model, engine_power, color):
+    def __init__(self, owner, model, color, engine_power):
         self.owner = owner
         self.__model = model
-        self.__engine_power = engine_power
         self.__color = color
+        self.__engine_power = engine_power
     def get_model(self, model):
         return f'Модель: {self.__model}'
     def get_horsepower(self, engine_power):
