@@ -23,8 +23,9 @@ class Vehicle:
         else:
             print(f'Нельзя сменить цвет на {new_color}')
 class Sedan(Vehicle):
-    def __init__(self, PASSENGER_LIMIT):
-        self.__PASSENGER_LIMIT = 5
+    def __init__(self, owner, model, engine_power, color, COLOR_VARIANTS, PASSENGER_LIMIT):
+        super().__init__(owner, model, engine_power, color, COLOR_VARIANTS)
+        self.__PASSENGER_LIMIT = PASSENGER_LIMIT
 
 vehicle1 = Sedan('Fedos', 'Toyota Mark II', 'blue', 500)
 
