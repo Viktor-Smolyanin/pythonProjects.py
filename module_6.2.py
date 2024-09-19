@@ -17,7 +17,7 @@ class Vehicle:
     def print_info(self):
         print(f'{self.__model}, {self.__engine_power}, {self.__color}, Владелец: {self.owner}')
     def set_color(self, new_color):
-        if new_color.lower() in self.__COLOR_VARIANTS:
+        if new_color.lower() in self.COLOR_VARIANTS:
             self.__color = new_color
         else:
             print(f'Нельзя сменить цвет на {new_color}')
