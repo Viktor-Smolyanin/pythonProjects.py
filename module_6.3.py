@@ -26,10 +26,9 @@ class Pegasus(Horse, Eagle):
         super().fly(dy)
 
     def get_pos(self):
-        return super(self.x_distance, self.y_distance)
+        return self.x_distance, self.y_distance
 
-    def voice(self, sound):
-        super().sound
+    def voice(self):
         print(f'{self.sound}')
 
 
