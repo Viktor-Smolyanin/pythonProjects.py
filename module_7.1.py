@@ -1,7 +1,8 @@
-class Product('Potato', 50.0, 'Vagetables'):
-    name = ''
-    weight = 0.0
-    category = ''
+class Product:
+    def __init__(self, name, weight, category):
+        self.name = 'Potato'
+        self.weight = 0.0
+        self.category = 'Vegetables'
 
     def __str__(self):
         return f'{self.name, self.weight, self.category}'
