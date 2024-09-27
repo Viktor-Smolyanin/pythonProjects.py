@@ -1,8 +1,8 @@
 class Product:
     def __init__(self, name, weight, category):
-        self.name = 'Potato'
-        self.weight = 0.0
-        self.category = 'Vegetables'
+        self.name = name
+        self.weight = weight
+        self.category = category
 
     def __str__(self):
         return f'{self.name, self.weight, self.category}'
@@ -22,8 +22,9 @@ class Shop():
         file = open(self.__file_name, 'a')
         for i in current_product:
             if i not in products:
-                file.write(current_product)
-                i.append(products)
+                products = file.write(current_product)
+                current_product.append(i)
+                current_product += str(products) + '\n'
             else:
                 print(f'Продукт {self.name} уже есть в магазине.')
         file.close()
