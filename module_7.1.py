@@ -20,30 +20,22 @@ class Shop():
     def add(self, *products):
         current_product = self.get_products()
         file = open(self.__file_name, 'a')
-        for i in current_product:
-            if i not in products:
-                products = file.write(current_product)
-                current_product.append(i)
+        for i in products:
+            if str(i) not in products:
+                file.write(str(i) + '\n')
                 current_product += str(products) + '\n'
             else:
-                print(f'Продукт {self.name} уже есть в магазине.')
+                print(f'Продукт {i.name} уже есть в магазине.')
         file.close()
+
+
 s1 = Shop()
 p1 = Product('Potato', 50.5, 'Vegetables')
 p2 = Product('Spaghetti', 3.4, 'Groceries')
 p3 = Product('Potato', 5.5, 'Vegetables')
 
-print(p2) # __str__
+print(p2)  # __str__
 
 s1.add(p1, p2, p3)
 
 print(s1.get_products())
-
-
-
-
-
-
-        
-
-
