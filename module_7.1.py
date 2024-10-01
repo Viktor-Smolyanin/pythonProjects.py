@@ -18,12 +18,11 @@ class Shop():
         return text
 
     def add(self, *products):
-        current_product = self.get_products()
+        current_product = self.get_products
         file = open(self.__file_name, 'a')
         for i in products:
-            if str(i) not in products:
+            if str(i) + '\n' not in current_product:
                 file.write(str(i) + '\n')
-                current_product += str(products) + '\n'
             else:
                 print(f'Продукт {i.name} уже есть в магазине.')
         file.close()
