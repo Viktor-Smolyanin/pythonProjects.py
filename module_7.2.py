@@ -4,6 +4,7 @@ def custom_write(file_name, strings):
     file = open(file_name, 'w', encoding='utf-8')
     for i in strings:
         strings_positions[(number, file.tell())] = i
+        number += 1
         file.write(i + '\n')
     file.close()
     return strings_positions
