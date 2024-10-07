@@ -25,7 +25,7 @@ class WordsFinder:
         result = {}
         for position, key in self.get_all_words().items():
             if word.lower() in key:
-                result[position] = key.count(word.lower)
+                result[position] = key.count(word.lower())
         return result
 
 
